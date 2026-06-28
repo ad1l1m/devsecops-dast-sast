@@ -54,7 +54,7 @@ Scaled architecture using OpenText ScanCentral as a central scan management laye
 - [`examples/gitlab-ci-sast.yml`](examples/gitlab-ci-sast.yml) — SAST automation in GitLab CI
 <!-- - [`examples/github-actions-sast.yml`](examples/github-actions-sast.yml) — same pipeline adapted for GitHub Actions -->
 
-> Note: all examples use generic placeholders (`${SSC_URL}`, `secrets.SSC_TOKEN`) instead of real infrastructure values. -->
+<!-- > Note: all examples use generic placeholders (`${SSC_URL}`, `secrets.SSC_TOKEN`) instead of real infrastructure values. --> -->
 
 ## Tech Stack
 
