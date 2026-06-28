@@ -19,7 +19,7 @@ This project demonstrates a real-world DevSecOps setup where security scanning i
 Initial setup where SAST and DAST scanners were integrated directly into the CI/CD pipeline without centralized orchestration.
 
 ![Git-flow process](docs/images/v1-without-scancentral/git-flow%20process.png)
-![SAST architecture](docs/images/v1-without-scancentral/SAST%20arhitecture.png)
+![SAST architecture](docs/images/v1-without-scancentral/SAST%20architecture.png)
 ![DAST architecture](docs/images/v1-without-scancentral/DAST%20architecture.png)
 
 ### v2 — Centralized scanning (with ScanCentral)
