@@ -29,12 +29,25 @@ Scaled architecture using OpenText ScanCentral as a central scan management laye
 
 ## How It Works
 
+### SAST Flow (triggered on feature → develop)
+
 1. Developer creates a merge request from `feature` branch into `develop`
-2. Pipeline automatically triggers **SAST** scan via ScanCentral
-3. Results are published to Fortify SSC
-4. If critical/high vulnerabilities are found — notification sent, pipeline can block or require manual override
-5. On `release` branch — **DAST** scan triggers against the running application
-6. Security specialist reviews findings in SSC and assigns remediation tasks to developers
+2. Pipeline automatically triggers **SAST** scan via ScanCentral against the application source code
+3. Results are published to Fortify SSC (OpenText Application Security)
+4. If critical/high vulnerabilities are found — notification sent via email; pipeline can be blocked or manually overridden (override/skip)
+5. Security specialist reviews findings in SSC and assigns remediation tasks
+6. Developers review assigned vulnerabilities
+
+### DAST Flow (triggered on release → develop)
+
+1. Developer creates a merge request from `release` branch into `develop`
+2. The web application is deployed/started
+3. Scan is assigned against the running application
+4. OpenText DAST (WebInspect) scans the live web application
+5. Results are published to Fortify SSC (OpenText Application Security)
+6. If critical/high vulnerabilities are found — notification sent via email; pipeline can be blocked or manually overridden (override/skip)
+7. Security specialist reviews findings in SSC and assigns remediation tasks
+8. Developers review assigned vulnerabilities
 
 ## CI/CD Examples
 
